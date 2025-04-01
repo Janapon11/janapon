@@ -7,19 +7,19 @@ const Contact = () => {
         {/* Contact Info Item 1 */}
         <div className="contact-info">
           <h3>Email:</h3>
-          <p>janapon@example.com</p>
+          <p>briannjanapon1@gmail.com</p>
         </div>
 
         {/* Contact Info Item 2 */}
         <div className="contact-info">
           <h3>Phone:</h3>
-          <p>+123 456 7890</p>
+          <p>09123230811</p>
         </div>
 
         {/* Contact Info Item 3 */}
         <div className="contact-info">
           <h3>Facebook:</h3>
-          <p>facebook.com/janapon</p>
+          <p>https://www.facebook.com/Briann.Christian.Janapon/</p>
         </div>
       </div>
     </section>

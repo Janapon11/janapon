@@ -1,0 +1,537 @@
+:root {
+  --bg-light: white;
+  --text-light: black;
+  --bg-dark: black;
+  --text-dark: white;
+  --font-main: 'Poppins', sans-serif;
+  --font-size-large: 32px;
+  --font-size-medium: 18px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  font-family: var(--font-main);
+}
+
+section {
+  padding-top: 120px; /* Add enough padding to ensure the section title is visible */
+  margin-top: 0; /* Ensure no extra margin is added */
+}
+
+/* Section Title */
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0; /* Removed extra margin to avoid overlap */
+  text-transform: uppercase;
+  color: black;
+  padding-top: 20px;
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  background: black;
+  border-bottom: 2px solid white;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  font-family: var(--font-main);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-links a:hover {
+  color: gray;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+
+  .nav-links {
+    gap: 4px; /* Reduce gap between navbar links */
+  }
+
+  .nav-links a {
+    font-size: 14px; /* Smaller text size */
+    padding: 6px 8px; /* Reduced padding */
+  }
+
+  .logo {
+    font-size: 18px; /* Smaller logo size on smaller screens */
+  }
+}
+
+
+/* About Section */
+#about {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  padding-top: 100px; /* Adjust padding to make room for navbar */
+  text-align: center;
+  height: 800px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.about-photo {
+  width: 250px; /* Adjust the size as needed */
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the photo is contained and cropped to fit */
+  border: 3px solid #222; /* Optional border style */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-photo {
+    width: 150px; /* Smaller size on mobile */
+    height: 150px;
+  }
+
+  .about-description {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #about {
+    padding-top: 120px; /* Adjust padding on smaller screens */
+  }
+
+  #about h2 {
+    font-size: 24px; /* Adjust title size for smaller screens */
+    margin-bottom: 10px;
+  }
+}
+
+/* Skills Section */
+#skills {
+  padding: 80px 10px; 
+  text-align: center;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* Skill Card Styling */
+.skill-card {
+  background: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px; /* Adjusted size for skill cards */
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto; /* Prevent flex-wrap */
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Skill Header (Image and Title) */
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.skill-image {
+  width: 40px; /* Adjust the size of icons */
+  height: 40px;
+  margin-right: 10px;
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Skill Bar Container */
+.skill-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Skill Bar */
+.skill-bar {
+  background: #333;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-level {
+  background: #00bcd4;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Skill Percentage */
+.skill-percentage {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 80%; /* Adjust the width on smaller screens */
+    max-width: 300px;
+  }
+
+  .skill-header {
+    flex-direction: column;
+  }
+
+  .skill-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Projects Section */
+#projects {
+  padding: 130px 10px;
+  text-align: center;
+  margin-top: 80px; /* Add margin-top to avoid overlap with fixed navbar */
+}
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 20px; /* Add margin to give space between the section title and projects */
+}
+
+/* Project Card Styling */
+.project-card {
+  background: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto;
+  margin-bottom: 30px; /* Add margin-bottom to space between cards */
+}
+
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Project Title Styling */
+.project-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Project Description */
+.project-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center; /* Added text-align for consistency */
+}
+
+/* Project Buttons */
+.project-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-buttons .btn {
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 45%;
+  text-align: center;
+}
+
+.github-btn {
+  background-color: #333;
+}
+
+.demo-btn {
+  background-color: #008CBA;
+}
+
+.github-btn:hover {
+  background-color: #444;
+}
+
+.demo-btn:hover {
+  background-color: #005f73;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .project-buttons .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* Project Card Image Styling */
+.project-image {
+  width: 100%; /* Make image take up full width */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover; /* Ensures the image doesn't stretch */
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 10px;
+  text-align: center;
+}
+
+/* Contact Container */
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: black; /* Black background for the container */
+  padding: 30px;
+  border: 2px solid white; /* White border around the contact container */
+  border-radius: 10px; /* Rounded corners */
+  display: flex; /* Flexbox to align contact items horizontally */
+  justify-content: space-between; /* Space out items */
+  gap: 20px; /* Space between the contact items */
+  flex-wrap: wrap; /* Wrap the contact items if needed */
+}
+
+/* Contact Info Items */
+.contact-info {
+  background-color: #222; /* Dark background for each contact item */
+  padding: 20px;
+  border: 2px solid white; /* White border around each contact item */
+  border-radius: 10px; /* Optional: rounded corners for each item */
+  width: 30%; /* Each item takes 30% of the container width */
+  text-align: center;
+}
+
+.contact-info h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  color: #ccc; /* Light grey text for the contact details */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Adjust container to take up more space on smaller screens */
+  .contact-container {
+    flex-direction: column; /* Stack contact items vertically */
+    padding: 20px;
+    width: 90%; /* Make the container responsive to screen size */
+  }
+
+  /* Make each contact item full width on smaller screens */
+  .contact-info {
+    width: 100%;
+    margin-bottom: 20px; /* Space between items */
+  }
+
+  /* Adjust text size for smaller screens */
+  .contact-info h3 {
+    font-size: 20px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+}
+
+/* Footer Section */
+.footer {
+  background-color: #000; /* Black background */
+  color: white; /* White text color */
+  padding: 40px 10px; /* Padding for spacing */
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Footer Container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-bottom: 20px; /* Space between icons and footer text */
+}
+
+.social-icon {
+  color: white; /* White color for social icons */
+  font-size: 24px; /* Icon size */
+  margin: 0 15px; /* Space between icons */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #008CBA; /* Change icon color on hover */
+}
+
+/* Footer Text */
+.footer-text {
+  font-size: 14px; /* Smaller text size */
+  color: #ccc; /* Light grey color for text */
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px 10px;
+  }
+
+  .footer-text {
+    font-size: 12px; /* Smaller text size on mobile */
+  }
+}

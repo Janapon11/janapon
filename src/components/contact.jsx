@@ -19,7 +19,7 @@ const Contact = () => {
         {/* Contact Info Item 3 */}
         <div className="contact-info">
           <h3>Facebook:</h3>
-          <p>Briann.Christian.Janapon/</p>
+          <p>Briann Christin Janapon/</p>
         </div>
       </div>
     </section>
